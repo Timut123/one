@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARAKAT — цифровая безопасность и защита данных</title>
+<style>
+  :root{
+    --ink:#0e1a1f;
+    --paper:#eef2f1;
+    --line:rgba(14,26,31,0.12);
+    --accent:#2f6f5e;
+    --accent-soft:#dce9e4;
+    --muted:#5b6b68;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', Arial, sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:'IBM Plex Serif', Georgia, serif;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  a{color:var(--accent);}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px;}
+
+  header.top{
+    position:sticky;top:0;z-index:10;
+    background:rgba(238,242,241,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:15px;letter-spacing:0.04em;}
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;}
+  nav.top-nav{display:flex;gap:22px;font-size:14px;}
+  nav.top-nav a{color:var(--ink);text-decoration:none;opacity:0.7;}
+  nav.top-nav a:hover{opacity:1;}
+
+  section.hero{padding:96px 0 72px;}
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted); margin-bottom:18px; display:block;
+  }
+  .hero h1{font-size:44px;line-height:1.12;max-width:640px;}
+  .hero p.lead{margin-top:22px;font-size:17px;max-width:560px;color:var(--muted);}
+  .hero-meta{
+    margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);padding-top:22px;gap:16px;
+  }
+  .hero-meta div span{display:block;}
+  .hero-meta .num{font-family:var(--mono);font-size:13px;color:var(--muted);}
+  .hero-meta .label{font-size:14px;margin-top:4px;}
+
+  section.body-section{padding:56px 0;border-top:1px solid var(--line);}
+  section.body-section h2{font-size:26px;margin-bottom:18px;}
+  section.body-section .section-tag{
+    font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:0.08em;
+    text-transform:uppercase;margin-bottom:10px;display:block;
+  }
+  .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;
+  }
+  .card h3{font-size:16px;margin-bottom:8px;font-family:'IBM Plex Sans',sans-serif;font-weight:600;}
+  .card p{font-size:14px;color:var(--muted);margin:0;}
+
+  .legal{padding:56px 0;border-top:1px solid var(--line);}
+  .legal h2{font-size:24px;margin-bottom:6px;}
+  .legal .updated{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:26px;display:block;}
+  .legal h3{font-size:16px;margin:26px 0 8px;font-family:'IBM Plex Sans',sans-serif;font-weight:600;}
+  .legal p, .legal li{font-size:15px;color:#2a3634;}
+  .legal ul{padding-left:20px;}
+  .legal ol{padding-left:20px;}
+
+  footer{padding:40px 0 60px;border-top:1px solid var(--line);}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);}
+  footer a{color:var(--muted);}
+
+  .contact-box{
+    margin-top:18px;background:var(--accent-soft);border:1px solid var(--line);
+    border-radius:6px;padding:20px 22px;font-size:14px;
+  }
+  .contact-box code{font-family:var(--mono);background:#fff;padding:2px 6px;border-radius:3px;}
+
+  @media (max-width:720px){
+    .hero h1{font-size:32px;}
+    .hero-meta{grid-template-columns:1fr;}
+    .card-row{grid-template-columns:1fr;}
+    nav.top-nav{gap:14px;font-size:13px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topbar">
+    <div class="brand"><span class="dot"></span>BARAKAT</div>
+    <nav class="top-nav">
+      <a href="#about">О сервисе</a>
+      <a href="#privacy">Конфиденциальность</a>
+      <a href="#terms">Условия</a>
+      <a href="#data-deletion">Удаление данных</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Digital privacy &amp; security</span>
+    <h1>Защита данных и приватность соединения — как основа, а не опция.</h1>
+    <p class="lead">BARAKAT разрабатывает инструменты шифрования трафика и защиты персональных данных для частных пользователей и бизнеса. Мы считаем, что безопасное подключение к интернету должно быть простым и доступным каждому.</p>
+
+    <div class="hero-meta">
+      <div><span class="num">01</span><span class="label">Шифрование соединения</span></div>
+      <div><span class="num">02</span><span class="label">Защита данных пользователя</span></div>
+      <div><span class="num">03</span><span class="label">Поддержка через мессенджеры</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="body-section" id="about">
+  <div class="wrap">
+    <span class="section-tag">О сервисе</span>
+    <h2>Что мы делаем</h2>
+    <p>BARAKAT — технологическая команда, разрабатывающая программные решения для защиты конфиденциальности при использовании интернета. Мы работаем с шифрованием трафика, безопасностью подключения в общественных сетях Wi-Fi и защитой персональных данных пользователей.</p>
+
+    <div class="card-row">
+      <div class="card">
+        <h3>Шифрование трафика</h3>
+        <p>Защита передаваемых данных от перехвата при подключении к сети.</p>
+      </div>
+      <div class="card">
+        <h3>Приватность</h3>
+        <p>Минимизация сбора данных и прозрачная политика их обработки.</p>
+      </div>
+      <div class="card">
+        <h3>Поддержка клиентов</h3>
+        <p>Помощь пользователям через WhatsApp и другие каналы связи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="privacy">
+  <div class="wrap">
+    <h2>Политика конфиденциальности</h2>
+    <span class="updated">Обновлено: 7 июля 2026</span>
+
+    <p>Настоящая Политика конфиденциальности описывает, как BARAKAT («мы», «сервис») собирает, использует и защищает данные пользователей при использовании наших сервисов, включая взаимодействие через WhatsApp и другие мессенджеры.</p>
+
+    <h3>Какие данные мы собираем</h3>
+    <ul>
+      <li>Контактные данные, предоставленные при обращении в поддержку (номер телефона, имя пользователя мессенджера)</li>
+      <li>Техническая информация, необходимая для оказания услуги (данные о статусе подписки, идентификаторы сессии)</li>
+      <li>История переписки с целью обработки обращений в поддержку</li>
+    </ul>
+
+    <h3>Как мы используем данные</h3>
+    <ul>
+      <li>Для предоставления и поддержки работы сервиса</li>
+      <li>Для связи с пользователем по вопросам, связанным с его обращением</li>
+      <li>Для улучшения качества и безопасности сервиса</li>
+    </ul>
+
+    <h3>Хранение и защита данных</h3>
+    <p>Мы применяем технические меры защиты для предотвращения несанкционированного доступа к данным пользователей. Данные хранятся не дольше, чем это необходимо для целей, указанных в настоящей политике, либо в соответствии с требованиями законодательства.</p>
+
+    <h3>Передача третьим лицам</h3>
+    <p>Мы не продаём и не передаём персональные данные пользователей третьим лицам, за исключением случаев, предусмотренных законодательством, либо необходимости привлечения технических подрядчиков для обеспечения работы сервиса (например, платёжных систем).</p>
+
+    <h3>Права пользователя</h3>
+    <p>Пользователь вправе запросить информацию о собранных данных, их исправление или удаление. Подробнее — в разделе «Удаление данных» ниже.</p>
+  </div>
+</section>
+
+<section class="legal" id="terms">
+  <div class="wrap">
+    <h2>Условия использования</h2>
+    <span class="updated">Обновлено: 7 июля 2026</span>
+
+    <p>Используя сервисы BARAKAT, вы соглашаетесь с настоящими условиями.</p>
+
+    <h3>Описание услуги</h3>
+    <p>BARAKAT предоставляет программные решения для защиты конфиденциальности и безопасности интернет-соединения, а также поддержку пользователей через мессенджеры, включая WhatsApp.</p>
+
+    <h3>Обязанности пользователя</h3>
+    <ul>
+      <li>Использовать сервис в соответствии с законодательством страны проживания</li>
+      <li>Не использовать сервис для незаконной деятельности</li>
+      <li>Предоставлять достоверную информацию при обращении в поддержку</li>
+    </ul>
+
+    <h3>Ограничение ответственности</h3>
+    <p>Сервис предоставляется «как есть». Мы прилагаем разумные усилия для обеспечения стабильной работы, но не гарантируем бесперебойную работу сервиса в любых условиях.</p>
+
+    <h3>Изменения условий</h3>
+    <p>Мы можем обновлять настоящие условия. Актуальная версия всегда доступна на этой странице.</p>
+  </div>
+</section>
+
+<section class="legal" id="data-deletion">
+  <div class="wrap">
+    <h2>Удаление данных пользователя</h2>
+    <span class="updated">Обновлено: 7 июля 2026</span>
+
+    <p>Вы можете запросить удаление своих персональных данных, собранных в рамках использования наших сервисов, включая переписку через WhatsApp.</p>
+
+    <h3>Как запросить удаление</h3>
+    <ol>
+      <li>Напишите в поддержку сервиса через тот же канал, в котором вы взаимодействуете с BARAKAT (например, чат поддержки в WhatsApp)</li>
+      <li>Укажите, что запрашиваете удаление персональных данных, и подтвердите номер телефона или идентификатор аккаунта</li>
+      <li>Мы обработаем запрос и удалим данные в течение 30 дней, за исключением информации, которую мы обязаны хранить по требованию законодательства</li>
+    </ol>
+
+    <div class="contact-box">
+      Запросы на удаление данных принимаются через службу поддержки сервиса.
+    </div>
+  </div>
+</section>
+
+<section class="body-section" id="contact">
+  <div class="wrap">
+    <span class="section-tag">Контакты</span>
+    <h2>Связаться с нами</h2>
+    <p>По всем вопросам, связанным с работой сервиса, конфиденциальностью данных или технической поддержкой, обращайтесь в службу поддержки BARAKAT через мессенджер, либо на <a href="mailto:dapipetc26@gmail.com">dapipetc26@gmail.com</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 BARAKAT</div>
+    <div><a href="#privacy">Конфиденциальность</a> · <a href="#terms">Условия</a> · <a href="#data-deletion">Удаление данных</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
